@@ -38,21 +38,18 @@ Router to navigate to new page
 ActivatedRoute to extract id from url
 ClientService to read specific client from database based on id
 ClientService also adds and deletes a client from the Firebase database
-HTML contains form validation for required, minlength & regex for email & disables submit button until all fields pass validtion
-
+HTML contains form validation for required, minlength & regex for email & disables submit button until all fields pass validtion  
 **client-details**
 FlashMessages to display appropriate messages
 Router to navigate to new page
 ClientService to add new client to database
 Client Model to retrive model of client object
-HTML contains pencil icon to edit field & routerLink for page navigation
-
+HTML contains pencil icon to edit field & routerLink for page navigation  
 **clients**
 ClientService to retrieve all clients from Firebase database
 Client Model to retrive model of client object
 Uses parseFloat javascript function to sum balances and convert to a float number
-HTML displays all clients in a table & routerLink to display details for a specific client using the client id
-
+HTML displays all clients in a table & routerLink to display details for a specific client using the client id  
 **dashboard**
 Display dashboard component
 HTML contains client and sidebar components
