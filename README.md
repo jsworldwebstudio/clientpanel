@@ -23,14 +23,14 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 ## Application Comments
-This application uses:
-**Firebase:** For storing client records and for email authentication
-**Flash Messages:** To give message feedback to user
-**Routing:** To access different pages of the app
-**Route Guards:** To block some pages from being seen if user not logged in.
-and block some pages from being viewed if flag is set for non-register (for a User)
-**Form Validation:** Not allow a form to be submitted unless all fields in correct format
-**Local Storage:** Add & retrieve an object of application level settings from local storage
+This application uses:  
+**Firebase:** For storing client records and for email authentication  
+**Flash Messages:** To give message feedback to user  
+**Routing:** To access different pages of the app  
+**Route Guards:** To block some pages from being seen if user not logged in.  
+and block some pages from being viewed if flag is set for non-register (for a User)  
+**Form Validation:** Not allow a form to be submitted unless all fields in correct format  
+**Local Storage:** Add & retrieve an object of application level settings from local storage  
 ## Listing of Components and Features
 **add-client**  
 FlashMessages to display appropriate messages  
