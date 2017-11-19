@@ -1,0 +1,61 @@
+<div class="row">
+  <div class="col-md-6 mx-auto">
+    <div class="card">
+      <div class="card-body">
+        <!--<img src="/assets/img/logo.png" alt="" class="d-block mx-auto">-->
+        <h1 class="text-center">Register</h1>
+      
+        <form novalidate #f="ngForm" (ngSubmit)="onSubmit(f)">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              [ngClass]="{'is-invalid':registerEmail.errors?.required &&
+              registerEmail.touched || registerEmail.errors?.pattern}"
+              [(ngModel)]="registrant.email"
+              name="email"
+              #registerEmail = "ngModel"
+              required
+              pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+            >
+            <div *ngIf="registerEmail.errors?.required &&
+            registerEmail.touched" class="invalid-feedback">
+              Email is required
+            </div>
+            <div *ngIf="registerEmail.errors?.pattern &&
+            registerEmail.touched" class="invalid-feedback">
+            Email format is invalid
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              [ngClass]="{'is-invalid':registerPassword.errors?.required &&
+              registerPassword.touched || registerPassword.errors?.minlength}"
+              [(ngModel)]="registrant.password"
+              name="password"
+              #registerPassword = "ngModel"
+              minlength="8"
+              required
+            >
+            <div *ngIf="registerPassword.errors?.required &&
+            registerPassword.touched" class="invalid-feedback">
+              Password is required
+            </div>
+            <div *ngIf="registerPassword.errors?.minlength &&
+            registerPassword.touched" class="invalid-feedback">
+            Password must be at least 8 characters
+            </div>
+          </div>
+
+          <input type="submit" value="Submit" [disabled]="!f.form.valid" class="btn btn-primary btn-block">
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
